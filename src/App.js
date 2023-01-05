@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from "react-bootstrap/esm/Container";
+import BasicExample from "./Carding";
+import Row from 'react-bootstrap/Row';
+import State from "./State";
+import Array from "./Array";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container className="m-4">
+      <Row>
+     <BasicExample  name="flower pot" offer="20%"price='300' />
+     <BasicExample name="silver pot" offer="10%"price='1000'/>
+     <BasicExample name="clay pot" offer="7%"price='600'/>
+     </Row>
+     <State/>
+     <Array/>
+     </Container>
+    </>
   );
-}
+  }
 
 export default App;
